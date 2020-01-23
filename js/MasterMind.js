@@ -50,10 +50,10 @@ let MasterMind = {
          */
         let intentoArray = intento.split("");
         let comprobacion = [undefined, undefined, undefined, undefined];
-        let arrayCombinacion = combinacion.split("");
+        let arrayCombinacion = this.combinacion.split("");
 
         for (let i = 0; i < 4; i++) {
-            if (intento[i] == combinacion[i]) {
+            if (intento[i] == this.combinacion[i]) {
                 comprobacion[i] = -2;
                 intentoArray[i] = undefined;
                 arrayCombinacion[i] = undefined;

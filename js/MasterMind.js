@@ -65,7 +65,7 @@ let MasterMind = {
                 for (let j = 0; j < arrayCombinacion.length; j++) {
                     if (intentoArray[i] == arrayCombinacion[j]) {
                         comprobacion[i] = -1;
-                        arrayCombinacion[j] = undefined;
+                        
                     }
                 }
             }
@@ -73,3 +73,6 @@ let MasterMind = {
         return comprobacion.sort();
     }
 }
+/**
+ * 
+ */

@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#cajaIzquierda{
+    display: flex;
+    align-self: flex-end;
+}
+
+#cajaDerecha{
+    width: min-content;
+}
+
+#cajaCombinacion{
+    display: flex;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+#cajaSolucion{
+    display: flex;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+main{
+    display: flex;
+}

@@ -7,7 +7,7 @@
  */
 
 
-let masterMind = (function () {
+masterMind = (function () {
 
     let combinacion;
 
@@ -16,7 +16,7 @@ let masterMind = (function () {
     }
 
     let generarAleatorio =() => {
-        return aleatorio = Math.floor(Math.random() * (0 - 9) + 9);
+        return aleatorio = Math.floor(Math.random() * (0 - 8) + 8);
     };
 
     let mostrar = () =>{

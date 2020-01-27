@@ -7,72 +7,52 @@
  */
 
 
-let MasterMind = {
-    /**
-     * Propiedad que contiene la combinación ganadora
-     */
-    combinacion: undefined,
+let masterMind = (function () {
 
-    /**
-     * Método que genera una combinación y la almacena en la propiedad combinacion
-     */
-    init: function () {
+    let combinacion;
 
-        let bola1 = Math.floor(Math.random() * (0 - 9) + 9);
-        let bola2 = Math.floor(Math.random() * (0 - 9) + 9);
-        let bola3 = Math.floor(Math.random() * (0 - 9) + 9);
-        let bola4 = Math.floor(Math.random() * (0 - 9) + 9);
+    let init = () => {
+        combinacion = "" + generarAleatorio() + generarAleatorio() + generarAleatorio() + generarAleatorio();
+    }
 
-        this.combinacion = "" + bola1 + bola2 + bola3 + bola4;
+    let generarAleatorio =() => {
+        return aleatorio = Math.floor(Math.random() * (0 - 9) + 9);
+    };
 
+    let mostrar = () =>{
+        return combinacion;
+    }
 
-    },
-
-    /**
-     * Muestra la combianación por consola
-     * @returns combiancion
-     */
-    mostrar: function () {
-        return this.combinacion;
-    },
-
-    /**
-     * Comprueba la combinación que introduce el usuario y 
-     * devuelve un array con el número de negros y blancos acertados
-     * @param {intento} intento 
-     * @returns comprobacion
-     */
-    comprobarCoincidencia: function (intento) {
-        /**
-         * acierto = "-2";
-         * color = "-1";
-         * fallo = "undefined";
-         */
+    let comprobarCoincidencia =(intento)=>{
         let intentoArray = intento.split("");
         let comprobacion = [undefined, undefined, undefined, undefined];
-        let arrayCombinacion = this.combinacion.split("");
+        let arrayCombinacion = combinacion.split("");
 
         for (let i = 0; i < 4; i++) {
-            if (intento[i] == this.combinacion[i]) {
+            if (intento[i] == combinacion[i]) {
                 comprobacion[i] = -2;
                 intentoArray[i] = undefined;
                 arrayCombinacion[i] = undefined;
             }
         }
 
+
         for (let i = 0; i < intentoArray.length; i++) {
             if (intentoArray[i] != undefined) {
-                for (let j = 0; j < arrayCombinacion.length; j++) {
-                    if (intentoArray[i] == arrayCombinacion[j]) {
-                        comprobacion[i] = -1;
-                        
-                    }
+                if(arrayCombinacion.indexOf(intentoArray[i]) != -1){
+                    arrayCombinacion[arrayCombinacion.indexOf(intentoArray[i])] = undefined;
+                    comprobacion[i] = -1;
                 }
             }
-        }
-        return comprobacion.sort();
+        } 
+        return comprobacion.sort((a, b) => a - b);
     }
-}
-/**
- * 
- */
+
+    return{
+        init: init,
+        mostrar: mostrar,
+        comprobarCoincidencia: comprobarCoincidencia
+        
+    };
+
+})();

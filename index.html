@@ -9,40 +9,42 @@
     <link rel="stylesheet" href="css/estilo.css">
     <script src="js/guiMasterMinds.js"></script>
     <script src="js/MasterMind.js"></script>
-    
+
 
 </head>
 
 <body>
     <main>
         <div id="cajaIzquierda">
-            <div id="cajaCombinacion">
-                <svg  height="100" width="100">
-                    <circle id="ficha1" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="gray"/>
-                </svg>
-                <svg height="100" width="100">
-                    <circle  cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="gray" />
-                </svg>
-                <svg height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="gray" />
-                </svg>
-                <svg height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="gray" />
-                </svg>
-            </div>
-            <div id="cajaSolucion">
-                <svg height="100" width="100">
-                    <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="gray" />
-                </svg>
-                <svg height="100" width="100">
-                    <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="gray" />
-                </svg>
-                <svg height="100" width="100">
-                    <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="gray" />
-                </svg>
-                <svg height="100" width="100">
-                    <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="gray" />
-                </svg>
+            <div id="combinaciones">
+                <div id="cajaCombinacion">
+                    <svg height="100" width="100">
+                        <circle id="ficha1" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="gray" />
+                    </svg>
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="gray" />
+                    </svg>
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="gray" />
+                    </svg>
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="gray" />
+                    </svg>
+                </div>
+                <div id="cajaSolucion">
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="gray" />
+                    </svg>
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="gray" />
+                    </svg>
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="gray" />
+                    </svg>
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="gray" />
+                    </svg>
+                </div>
             </div>
         </div>
         <div id="cajaDerecha">
@@ -71,10 +73,11 @@
                 <svg height="100" width="100">
                     <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="green" />
                 </svg>
-                <img id="comprobarIntento" src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_check_circle_black_48dp.png" alt="">
+                <img id="comprobarIntento"
+                    src="https://raw.githubusercontent.com/google/material-design-icons/master/action/2x_web/ic_check_circle_black_48dp.png"
+                    alt="">
             </div>
         </div>
     </main>
 </body>
-
 </html>

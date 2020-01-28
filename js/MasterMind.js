@@ -5,8 +5,6 @@
  * 
  * @author Juan Antonio Bujalance García
  */
-
-
 masterMind = (function () {
 
     let combinacion;
@@ -36,7 +34,6 @@ masterMind = (function () {
             }
         }
 
-
         for (let i = 0; i < intentoArray.length; i++) {
             if (intentoArray[i] != undefined) {
                 if(arrayCombinacion.indexOf(intentoArray[i]) != -1){
@@ -52,7 +49,5 @@ masterMind = (function () {
         init: init,
         mostrar: mostrar,
         comprobarCoincidencia: comprobarCoincidencia
-        
     };
-
 })();

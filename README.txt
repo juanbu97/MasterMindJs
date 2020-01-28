@@ -1,1 +1,1 @@
-https://iesgrancapitan-dwec.github.io/ud6-a1-mastemind-juanbu97/
+https://juanbu97.github.io/MasterMindJs/

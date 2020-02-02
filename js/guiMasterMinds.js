@@ -57,13 +57,12 @@
         }
 
         if (aciertos === 4) {
-            alert("Has ganado la partida");
+            if(confirm("Has ganado la partida.\n ¿Otra Partida?"))
+                reiniciar();
         } else {
             intento = "";
             annadirIntento();
         }
-
-
     }
 
     let pintarSolucion = (solucion) => {
@@ -125,6 +124,10 @@
         clone = document.getElementById('combinaciones').cloneNode(true);
 
         document.getElementById("comprobarIntento").addEventListener("click", comprobarIntento);
+    }
+
+    let reiniciar = () =>{
+        location.reload();
     }
 
     document.addEventListener("DOMContentLoaded", init);
